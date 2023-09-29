@@ -1,0 +1,34 @@
+java
+import java.util.Scanner;
+public class Login 
+{
+    public static void main(String[] args) 
+{
+        String username;
+        String password;
+        int attempts = 3;
+        Scanner bse = new Scanner(System.in);
+        boolean loggedIn = false;
+        while (attempts > 0 && !loggedIn) 
+{
+            System.out.println("Enter username:");
+            String inputUsername = scanner.nextLine();
+            System.out.println("Enter password:");
+            String inputPassword = scanner.nextLine();
+            if (inputUsername.equals(username) && inputPassword.equals(password)) 
+{
+                System.out.println("Login successful!");
+                loggedIn = true;
+            } 
+else 
+{
+                attempts--;
+                System.out.println("Incorrect username or password. " + attempts + " attempts remaining.");
+            }
+        }
+        if (!loggedIn) 
+{
+            System.out.println("Attempts Exceeded!");
+        }
+    }
+}
